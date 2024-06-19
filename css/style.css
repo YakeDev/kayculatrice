@@ -1,0 +1,76 @@
+/**
+*Erickay design
+*
+*/
+
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+  color: #e7e7e8;
+}
+body {
+  font-family: sans-serif;
+}
+
+main {
+  background-color: aliceblue;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.calc-section {
+  background-color: #4f5355;
+  border-radius: 14px;
+  border: 1px solid #4f5355;
+  box-shadow: 0px 16px 25px 1px rgba(96, 100, 102, 0.74);
+}
+
+div.calc-container {
+  border: 0.7px solid #ababab;
+  width: 232px;
+  border-radius: 14px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+input.calc-input {
+  background-color: #4f5355;
+  text-align: end;
+  border: 0px;
+  height: 60px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 14px 14px 0px 0px;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+button.calc-btn {
+  width: 25%;
+  border: 0.2px solid #4f5355;
+  box-sizing: border-box;
+  height: 50px;
+  font-size: 22px;
+}
+#btn-zero {
+  width: 50%;
+  border-radius: 0px 0px 0px 14px;
+}
+#btn-egal {
+  border-radius: 0px 0px 14px 0px;
+}
+
+button.btn-type-1 {
+  background-color: #7b7d7f;
+}
+button.btn-type-2 {
+  background-color: #606466;
+}
+button.btn-type-3 {
+  background-color: #ff9f0b;
+}
