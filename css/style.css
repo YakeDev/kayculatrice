@@ -46,6 +46,7 @@ div.calc-container {
   text-transform: uppercase;
   font-size: 10px;
   font-weight: lighter;
+  color: #7b7d7f;
 }
 
 input.calc-screen {
@@ -56,16 +57,15 @@ input.calc-screen {
   height: 50px;
   width: 100%;
   padding: 3px;
-  /* border-radius: 14px 14px 0px 0px; */
   font-size: 40px;
   font-weight: lighter;
   width: 97.5%;
   margin: 0 auto;
 }
 
-/* input.calc-screen::placeholder {
+input.calc-screen::placeholder {
   color: #ffffff;
-} */
+}
 
 button.calc-btn {
   width: 25%;
