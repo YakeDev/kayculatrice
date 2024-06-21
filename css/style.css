@@ -84,10 +84,10 @@ button.calc-btn {
   background-color: #ff9f0b;
 }
 
-button#btn-coma {
+button#btn-point {
   background-color: #7b7d7f;
 }
-button#btn-coma:active {
+button#btn-point:active {
   background-color: hsla(0, 0%, 90%, 0.565);
 }
 button.btn-type-1 {

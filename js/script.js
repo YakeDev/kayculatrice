@@ -1,6 +1,6 @@
 let btnChiffre = document.querySelectorAll("button.btn-type-1");
 let screen = document.querySelector(".calc-screen");
-let coma = document.querySelector("#btn-coma");
+let coma = document.querySelector("#btn-point");
 let clear = document.querySelector("#btn-clear");
 let signNumber = document.querySelector("#btn-sign");
 let operators = document.querySelectorAll(".operator");
