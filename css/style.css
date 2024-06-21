@@ -50,7 +50,7 @@ div.calc-container {
 
 input.calc-screen {
   background-color: #4f5355;
-  text-align: end;
+  text-align: right;
   border: 0px;
   outline: 0px;
   height: 50px;
@@ -63,9 +63,9 @@ input.calc-screen {
   margin: 0 auto;
 }
 
-input.calc-screen::placeholder {
+/* input.calc-screen::placeholder {
   color: #ffffff;
-}
+} */
 
 button.calc-btn {
   width: 25%;
@@ -84,6 +84,12 @@ button.calc-btn {
   background-color: #ff9f0b;
 }
 
+button#btn-coma {
+  background-color: #7b7d7f;
+}
+button#btn-coma:active {
+  background-color: hsla(0, 0%, 90%, 0.565);
+}
 button.btn-type-1 {
   background-color: #7b7d7f;
 }

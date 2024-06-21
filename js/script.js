@@ -1,7 +1,8 @@
 let btnChiffre = document.querySelectorAll("button.btn-type-1");
 let screen = document.querySelector(".calc-screen");
-// let egal = document.querySelector("#btn-egal");
+let coma = document.querySelector("#btn-coma");
 let clear = document.querySelector("#btn-clear");
+let signNumber = document.querySelector("#btn-sign");
 let operators = document.querySelectorAll(".operator");
 
 let firstNumber = 0;
@@ -9,6 +10,47 @@ let secondNumber = 0;
 let answer = 0;
 let operator = "";
 let calcTest = false;
+let screenNum = "";
+let virgule = "";
+
+//Add minus sign
+signNumber.addEventListener("click", function () {
+  screenNum = screen.value;
+
+  if (screenNum.includes("-")) {
+    screen.value = screenNum * -1;
+  } else {
+    if (screen.value === "") {
+      screen.value;
+    } else {
+      screen.value = screenNum * -1;
+      // screen.value += parseFloat(screenNum) * -1;
+      console.log("Signnnnnn");
+    }
+  }
+});
+
+//coma btn
+coma.addEventListener("click", function (e) {
+  screenNum = screen.value;
+  virgule = e.target.value;
+
+  console.log("screen recuperer: " + screenNum);
+  console.log("virgule recup: " + virgule);
+
+  if (screenNum.includes(virgule)) {
+    screen.value = screen.value;
+    console.log("le point existe");
+  } else {
+    if (screen.value !== "") {
+      screen.value += virgule;
+    } else {
+      screen.value = "0" + virgule;
+    }
+
+    console.log("le point n'existe pas");
+  }
+});
 
 btnChiffre.forEach(function (button) {
   button.addEventListener("click", function (e) {
@@ -16,12 +58,14 @@ btnChiffre.forEach(function (button) {
       //read number
       if (operator === "") {
         screen.value += parseFloat(e.target.value);
+        // putSign();
         firstNumber = parseFloat(screen.value);
 
         console.log("Nombre1: " + firstNumber);
       } else {
         secondNumber += parseFloat(e.target.value);
         screen.value = parseFloat(secondNumber);
+        // putSign();
         console.log("Nombre2: " + secondNumber);
       }
     } else {
@@ -31,8 +75,6 @@ btnChiffre.forEach(function (button) {
       screen.value = "";
       screen.value += parseFloat(e.target.value);
       secondNumber = screen.value;
-
-      console.log("Cool");
     }
   });
 });
@@ -42,18 +84,8 @@ operators.forEach(function (button) {
   button.addEventListener("click", function (e) {
     if (e.target.value !== "=") {
       operator = e.target.value;
-
-      firstNumber = parseFloat(firstNumber);
-      secondNumber = parseFloat(secondNumber);
-
-      // console.log("Calcule: " + answer);
-      // screen.value = parseFloat(firstNumber) + parseFloat(secondNumber);
-
-      console.log("Operateur egale: " + operator);
-      console.log("screen.value: " + screen.value);
+      putSign();
     } else {
-      console.log("Nombre2: " + secondNumber);
-
       switch (operator) {
         case "+":
           add();
@@ -82,6 +114,8 @@ clear.addEventListener("click", function () {
   answer = 0;
   secondNumber = 0;
   operator = "";
+  screenNum = "";
+  virgule = "";
 });
 
 function add() {
@@ -90,6 +124,8 @@ function add() {
   screen.value = answer;
   firstNumber = answer;
   secondNumber = answer;
+  screenNum = "";
+  virgule = "";
 }
 function subtract() {
   answer = parseFloat(firstNumber) - parseFloat(secondNumber);
@@ -97,6 +133,8 @@ function subtract() {
   screen.value = answer;
   firstNumber = answer;
   secondNumber = answer;
+  screenNum = "";
+  virgule = "";
 }
 function multiply() {
   answer = parseFloat(firstNumber) * parseFloat(secondNumber);
@@ -104,6 +142,8 @@ function multiply() {
   screen.value = answer;
   firstNumber = answer;
   secondNumber = answer;
+  screenNum = "";
+  virgule = "";
 }
 function divide() {
   answer = parseFloat(firstNumber) / parseFloat(secondNumber);
@@ -111,11 +151,31 @@ function divide() {
   screen.value = answer;
   firstNumber = answer;
   secondNumber = answer;
+  screenNum = "";
+  virgule = "";
 }
 function percentage() {
-  screen.textContent = parseFloat(firstNumber) / 100;
+  screen.value = parseFloat(screen.value) / 100;
   firstNumber = answer;
   secondNumber = answer;
+  screenNum = "";
+  virgule = "";
 
   console.log("percentage : " + answer);
+}
+
+function putSign() {
+  if (firstNumber.includes("-")) {
+    firstNumber = parseFloat(firstNumber) * -1;
+    secondNumber = parseFloat(secondNumber);
+  } else if (secondNumber.includes("-")) {
+    firstNumber = parseFloat(firstNumber);
+    secondNumber = parseFloat(secondNumber) * -1;
+  } else if (firstNumber.includes("-") && secondNumber.includes("-")) {
+    firstNumber = parseFloat(firstNumber) * -1;
+    secondNumber = parseFloat(secondNumber) * -1;
+  } else {
+    firstNumber = parseFloat(firstNumber);
+    secondNumber = parseFloat(secondNumber);
+  }
 }
