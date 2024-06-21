@@ -48,7 +48,7 @@ div.calc-container {
   font-weight: lighter;
 }
 
-input.calc-input {
+input.calc-screen {
   background-color: #4f5355;
   text-align: end;
   border: 0px;
@@ -61,6 +61,10 @@ input.calc-input {
   font-weight: lighter;
   width: 97.5%;
   margin: 0 auto;
+}
+
+input.calc-screen::placeholder {
+  color: #ffffff;
 }
 
 button.calc-btn {
@@ -77,6 +81,7 @@ button.calc-btn {
 }
 #btn-egal {
   border-radius: 0px 0px 14px 0px;
+  background-color: #ff9f0b;
 }
 
 button.btn-type-1 {

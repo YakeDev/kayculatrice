@@ -14,49 +14,122 @@
           <div class="row">
             <form action="">
               <input
-                class="calc-input"
+                class="calc-screen"
                 type="text"
                 name=""
                 id="screen"
-                value="0"
+                placeholder="0"
+                value=""
+                maxlength="10"
               />
             </form>
           </div>
           <div class="row">
-            <button class="calc-btn btn-type-2" value="AC">AC</button>
-            <button class="calc-btn btn-type-2" value="+/-">+/-</button>
-            <button class="calc-btn btn-type-2" value="%">%</button>
-            <button class="calc-btn btn-type-3" value="÷">÷</button>
+            <button
+              type="button"
+              class="calc-btn btn-type-2"
+              id="btn-clear"
+              value="AC"
+            >
+              AC
+            </button>
+            <button type="button" class="calc-btn btn-type-2" value="+/-">
+              +/-
+            </button>
+            <button
+              type="button"
+              class="calc-btn btn-type-2 operator"
+              value="%"
+            >
+              %
+            </button>
+            <button
+              type="button"
+              class="calc-btn btn-type-3 operator"
+              value="÷"
+            >
+              ÷
+            </button>
           </div>
           <div class="row">
-            <button class="calc-btn btn-type-1" value="7">7</button>
-            <button class="calc-btn btn-type-1" value="8">8</button>
-            <button class="calc-btn btn-type-1" value="9">9</button>
-            <button class="calc-btn btn-type-3" value="x">x</button>
+            <button type="button" class="calc-btn btn-type-1" value="7">
+              7
+            </button>
+            <button type="button" class="calc-btn btn-type-1" value="8">
+              8
+            </button>
+            <button type="button" class="calc-btn btn-type-1" value="9">
+              9
+            </button>
+            <button
+              type="button"
+              class="calc-btn btn-type-3 operator"
+              value="x"
+            >
+              x
+            </button>
           </div>
           <div class="row">
-            <button class="calc-btn btn-type-1" value="4">4</button>
-            <button class="calc-btn btn-type-1" value="5">5</button>
-            <button class="calc-btn btn-type-1" value="6">6</button>
-            <button class="calc-btn btn-type-3" value="-">-</button>
+            <button type="button" class="calc-btn btn-type-1" value="4">
+              4
+            </button>
+            <button type="button" class="calc-btn btn-type-1" value="5">
+              5
+            </button>
+            <button type="button" class="calc-btn btn-type-1" value="6">
+              6
+            </button>
+            <button
+              type="button"
+              class="calc-btn btn-type-3 operator"
+              value="-"
+            >
+              -
+            </button>
           </div>
           <div class="row">
-            <button class="calc-btn btn-type-1" value="1">1</button>
-            <button class="calc-btn btn-type-1" value="2">2</button>
-            <button class="calc-btn btn-type-1" value="3">3</button>
-            <button class="calc-btn btn-type-3" value="+">+</button>
+            <button type="button" class="calc-btn btn-type-1" value="1">
+              1
+            </button>
+            <button type="button" class="calc-btn btn-type-1" value="2">
+              2
+            </button>
+            <button type="button" class="calc-btn btn-type-1" value="3">
+              3
+            </button>
+            <button
+              type="button"
+              class="calc-btn btn-type-3 operator"
+              value="+"
+            >
+              +
+            </button>
           </div>
           <div class="row">
-            <button class="calc-btn btn-type-1" id="btn-zero" value="0">
+            <button
+              type="button"
+              class="calc-btn btn-type-1"
+              id="btn-zero"
+              value="0"
+            >
               0
             </button>
-            <button class="calc-btn btn-type-1" value=",">,</button>
-            <button class="calc-btn btn-type-3" id="btn-egal" value="=">
+            <button type="button" class="calc-btn btn-type-1" value=",">
+              ,
+            </button>
+            <button
+              type="button"
+              class="calc-btn operator"
+              id="btn-egal"
+              value="="
+            >
               =
             </button>
           </div>
         </div>
       </section>
     </main>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
